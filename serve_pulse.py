@@ -1,8 +1,8 @@
 import asyncio
-from pulse_server import PulseServer
+
+import application
 
 
-if __name__ == "__main__":
-    server = PulseServer()
-    asyncio.get_event_loop().run_until_complete(server.serve())
-    asyncio.get_event_loop().run_forever()
+if __name__ == "__main__":    
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(application.apply())
